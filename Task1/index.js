@@ -71,5 +71,11 @@ function listTasks() {
   }
 }
 
-addTaskButton.addEventListener("click", addTask);
+taskInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    addTask();
+  }
+});
+
+addTaskButton.addEventListener("click" , addTask);
 listTasks();
