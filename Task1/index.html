@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple To-Do List</title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #f0f2f5;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 50px;
+                margin: 0;
+            }
+
+            .panel {
+                background: rgb(120, 112, 220);
+                padding: 20px 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                width: 350px;
+            }
+
+            h1 {
+                text-align: center;
+                margin-top: 0;
+                font-size: 1.5rem;
+                color: #f8f5f5;
+            }
+
+            #task-input {
+                width: calc(100% - 90px);
+                padding: 8px;
+                margin-right: 10px;
+                border: 1px dashed #ede9e9;
+                border-radius: 5px;
+            }
+
+            #add-task-button {
+                padding: 9px 15px;
+                border: dashed;
+                background-color: #53cf58;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            #add-task-button:hover {
+                background-color: #45a049;
+            }
+
+            #task-list {
+                list-style: none;
+                padding: 0;
+                margin-top: 20px;
+            }
+
+            #task-list li {
+                background: #fafafa;
+                padding: 10px;
+                margin-bottom: 8px;
+                border-radius: 5px;
+                display: flex;
+                cursor: pointer;
+                justify-content: space-between;
+                align-items: center;
+                transition: background 0.2s;
+            }
+
+            #task-list li span.completed {
+                text-decoration: line-through;
+                color: rgb(15, 13, 13);
+            }
+
+            #task-list li:hover {
+                background: #f0f0f0;
+            }
+
+            #task-list button {
+                background-color: #ff4d4d;
+                border: none;
+                color: white;
+                padding: 5px 8px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            #task-list button:hover {
+                background-color: #e60000;
+            }
+
+        </style>
+        <div class="panel">
+            <h1>My To-Do List</h1>
+            <input type="text" id="task-input" placeholder="Enter a new task" />
+            <button id="add-task-button">Add</button>
+            <ul id="task-list"></ul>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
